@@ -1,0 +1,123 @@
+<% include ./partial/header %>
+<div class="container card registerForm" >
+        <form action="/student/register" method="POST">
+          <div class="row" >
+            <div class="col">
+              <h2 style="text-align: center;">
+                Register
+              </h2>
+              <div class="form-group form-inline">
+                <input class="form-control" type="text" id="name" placeholder="name" name="name" style="width: 100%;"/>
+              </div>
+              <!-- type -->
+              <div id="rates" class="form-group"style="width: 500px;
+              display: flex;
+              ">
+                <input type="radio" id="r1" name="type" value="student" />
+                Student
+                <input type="radio" id="r2" name="type" value="hod" style="margin-left: 5%;"/>
+                HOD
+                <input type="radio" id="r3" name="type" value="warden" style="margin-left: 5%;"/>
+                Warden
+              </div>
+
+              <!-- id -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="username"
+                  placeholder="username"
+                  name="username"
+                  style="width: 100%;"
+                  required
+                />
+              </div>
+              <!-- password -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="password"
+                  style="width: 100%;"
+                />
+              </div>
+              <!-- confirm password -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="password"
+                  id="cpassword"
+                  name="password2"
+                  placeholder="Confirm password"
+                  style="width: 100%;"
+                  required
+                />
+              </div>
+              <!-- Department -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Department"
+                  id="department"
+                  name="department"
+                  style="width: 100%;"
+                  required
+                />
+              </div>
+              <!-- hostel -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="text"
+                  name="hostel"
+                  id="hostel"
+                  placeholder="Hostel"
+                  style="width: 100%;"
+                  required
+                />
+              </div>
+              <!-- image -->
+              <div class="form-group form-inline">
+                <input
+                  class="form-control"
+                  type="text"
+                  id="img"
+                  placeholder="img url"
+                  name="image"
+                  style="width: 100%;"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <button
+                  type="submit"
+                  class="btn btn-lg btn-primary btn-default btn-block"
+                  style=" color:#fff;"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- name -->
+        </form>
+
+        <a href="/" style="margin-left: 45%;">Back</a>
+      </div>
+    </div>
+  </div>
+  <% include ./partial/footer %>
+</div>
+<!-- <script>
+  const form =document.querySelector('form');
+  const frm_grp=document.querySelector('.form-group')
+  frm_grp.addEventListener('click',()=>{
+     const std=document.querySelector('.opt1');
+     std.style.diplay='block';
+  });
+</script> -->

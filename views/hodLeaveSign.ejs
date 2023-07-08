@@ -1,0 +1,63 @@
+<% include ./partial/header %><% include ./partial/hodfunction %>
+<div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+    max-width: 60%;
+    margin-left: 431px;
+    margin-top: -165px;  text-align: -webkit-center;"
+>
+  <table
+    class="content-table"
+    style="margin: 50px auto;min-width:400px; box-shadow: 0 0 20px rgba(0,0,0,0.15);"
+  >
+    <tr
+      style="background-color: rgb(9, 1, 19); border-radius: 5px 5px 0 0;overflow: hidden;  color: #ffffff;text-align: left; font-weight: bold;"
+    >
+      <th>
+        Student Name
+      </th>
+      <th>
+        Leave Subject
+      </th>
+      <th>
+        From
+      </th>
+      <th>To</th>
+      <th>Days</th>
+      <th>Status</th>
+      <th>Approve</th>
+      <th>Deny</th>
+    </tr>
+    <%students.forEach(function(leave){%>
+    <tr>
+      <th><%=leave.name%></th>
+      <th><%=leave.subject%></th>
+      <td><%=leave.from%></td>
+      <td><%=leave.to%></td>
+      <td><%=leave.days%></td>
+      <td><%=leave.status%></td>
+
+      <td>
+        <%if(leave.status==="pending"){%>
+          <a
+          href="/api/<%=hod.id%>/leave/<%=leave._id%>/approve"
+            class="btn btn1 btn-block btn-success"
+            >Approve</a
+          >
+          <%}%>
+        </td> 
+        <td>
+          <%if(leave.status==="pending"){%>
+            <a 
+            href="/api/<%=hod.id%>/leave/<%=leave._id%>/deny"
+            class="btn btn2 btn-block btn-danger"
+            >Deny</a
+          >
+          <%}%>
+        </td> 
+        <%})%>
+    </tr>
+  </table>
+</div>
+
+<% include ./partial/footer %>

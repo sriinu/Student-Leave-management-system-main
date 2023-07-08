@@ -1,0 +1,18 @@
+{
+    "name": "L.M.S",
+    "description": "A LeaveManagement system made with nodejs",
+    "repository": "https://github.com/Imranyy/LeaveManagement",
+    "keywords": ["L.M.S", "Imran"],
+    "env":{
+     " DATABASE":{
+      "description":"Enter Mongodb Atlas URI",
+      "required":true,
+      "value":"mongodb+srv://imran:imrany00@cluster0.f9fud.mongodb.net/LMS?retryWrites=true&w=majority"
+     },
+     "JWT_SECRET":{
+      "description":"Enter JWT SECRET",
+      "required":true
+     }
+    }
+  }
+  
